@@ -1,0 +1,42 @@
+/* C */
+//  funkcje przyklad 01
+#include <stdio.h>
+#include <conio.h>
+
+void info();//informacja o programie
+void dane();   // wprowadzanie danych
+int licz();      // szuka najwieksza liczbe
+void wyniki();  // podaje wynik
+
+int n, x[100], max;
+
+int main()
+{ clrscr();
+  info();
+  dane();
+  licz();
+  wyniki();
+  return 0;
+}
+void info()
+{ printf("\n%s\n%s",
+  "Uwaga: program wczytuje n liczb calkowitych",
+  " znajduje wartosc maksymalna");
+}
+void dane()
+{ printf("\n ile liczb n = ");
+  scanf("%d",&n);
+  printf("\n wprowadz liczby");
+  for (int j=0; j<n; j++)
+  scanf("%d",&x[j]);
+}
+int licz()
+{ max = x[0];
+  for (int i = 1; i<n; i++)
+  if (x[i]>max) max = x[i];
+  return max;
+}
+void wyniki()
+{ printf("\n maksymalna wartosc to %d",max);
+  getche();
+}
