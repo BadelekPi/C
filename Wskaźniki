@@ -1,0 +1,67 @@
+zmien - zmienna
+&zmien - adres pamieci zmiennej
+
+
+
+/* C */
+//  wskazniki, (ang. pointers)
+#include <stdio.h>
+#include <conio.h>
+int main()
+{
+  int x = 13;
+  int y = 33;
+  int *wsk1, *wsk2;
+  clrscr();
+  wsk1 = &x;
+  wsk2 = &y;
+  printf("\n x = %8d      y = %8d", x, y); //wydruk wartosci
+  printf("\n&wsk1 = %8u  &wsk2 = %8u", &wsk1,&wsk2); //wydruk adresu
+  printf("\n wsk1 = %8u   wsk2 = %8u", wsk1,wsk2);
+  printf("\n Hex &wsk1 = %8x  &wsk2 = %8x", &wsk1,&wsk2); //wydruk adresow zmiennych w kodzie szesnatkowym
+}
+
+
+
+
+/* C */
+//  wskazniki i tablice
+#include <stdio.h>
+#include <conio.h>
+int main()
+{
+  int suma,  *px;
+  int x[10] = {1,2,3,4,5};
+  clrscr();
+  suma = 0;
+  for (px = x; px<&x[10]; ++px)
+     suma += *px;
+  printf("\n suma = %8d",suma);   
+  suma = 0;
+  for (int i=0; i<10; ++i)
+     suma += *(x+i);
+  printf("\n suma = %8d",suma);
+  getche();
+  return 0;
+}
+
+
+
+
+/* C */
+//  wskazniki i tablice wielowymiarowe
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{  int suma, *px;
+   int x[2][3] = {1,2,3,
+                  4,5,6};
+   suma = 0;
+   px = (int*)x; //jawna konwersja do typu (int*)
+   for (int i=0; i<6; i++)
+     suma += *(px+i);
+   printf("\n suma = %8d",suma);
+   getche();
+   return 0;
+}
