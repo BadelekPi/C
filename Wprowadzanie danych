@@ -1,0 +1,25 @@
+/*C */
+//liczbycalkowite i znaki
+#include <stdio.h>
+#include <conio.h>
+int main()
+{
+   char imie[20];
+   int liczba;
+   clrscr();
+   printf("\nnapisz swoje imie :");
+   gets (imie);
+   printf("podaj ulubina liczbe :");
+   scanf("%d",&liczba);
+   printf("\n%s , twoja liczba to: %d",imie,liczba);
+   
+   getche();
+   return 0;
+}
+
+//%f - obsługiwanie liczby rzeczywistej
+//%d - spodziewany format łańcucha to liczba całkowita, dziesiętna
+//& - przekazywanie adresu zmiennej ,,liczba''
+//getche() - funkcja służąca do przetrzymania ekranu, dowolne nacisniecie klawisza zamyka terminal
+//do funkcji scanf() przekazywany jest wskaznik do zmiennej liczba poniewaz funkcja wymaga bezposredniego dostepu do wartosci przechowywanej w zmiennej liczba
+
