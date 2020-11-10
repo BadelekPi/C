@@ -1,0 +1,23 @@
+/* C */
+//  petla  do ..while
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+int main()
+{
+   float x;
+   char znak = 't';
+   clrscr();
+   printf("\nwprowadzenie liczbyujemnej dajeblad\n");
+   do
+   {
+      printf("\nliczba: ");
+      scanf("%f",&x);
+      printf("\n pierwiastek z liczby%8.2f = %8.2f",x, sqrt(x));
+      printf("\n tak=t, nie=n, dalej liczyc: ");
+      znak = getche();
+   } while (znak == 't');
+   printf("\nkoniec");
+   getche();
+   return 0;
+}
