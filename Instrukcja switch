@@ -1,0 +1,26 @@
+/* C */ 
+//instrukcja switch
+#include <stdio.h>
+#include <conio.h>
+int main()
+{
+  int opcja;
+  printf("\nopcje:1-zapis,2-edycja,3-wykonanie");
+  printf("\npodaj opcje: ");
+  scanf("%d",&opcja);
+  switch (opcja)
+  {
+    case 1:
+     {printf("\n zapis pliku");
+      break;  }
+    case 2:
+     {printf("\n edycja pliku");
+      break;  }
+    case 3:
+     {printf("\n wykonanie pliku");
+      break;  }
+    default : printf("\n inna operacja");  
+  }
+  getche();
+  return 0;
+}
