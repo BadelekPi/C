@@ -1,0 +1,15 @@
+stdin –kanał dla danych wejściowych (standard input)
+stdout –kanał dla danych wyjściowych (standard output)
+stderr –kanał  wyjściowy  do  obsługikomunikatów  o  błędach,  ma standardowo   przydzielony monitor, jakourządzenie zewnętrzne (standard error)
+
+#include <stdio.h>   //takze do obslugi pliku
+#include <conio.h>   //funkcja getche()
+int main()
+{ FILE *fwsk;  //wskaznik do FILE
+  char znak;
+  fwsk = fopen("plik_t1.txt","w"); // otwarcie pliku
+  while ( (znak=getche()) != '\r') //\r -ENTER 
+    putc(znak,fwsk);// zapis do pliku
+  fclose(fwsk);// zamkniecie pliku
+  return 0;
+}
