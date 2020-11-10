@@ -1,0 +1,23 @@
+/*C*/
+//struktury
+#include <stdio.h>
+#include <conio.h>
+struct skrypt
+{  char autor[80];
+   char tytul [80];
+   int rok;
+};
+int main()
+{ struct skrypt spis;
+  puts("Podaj autora:");
+  gets(spis.autor);
+  puts("Podaj tytul:");
+  gets(spis.tytul);
+  puts("Podaj rok wydania :");
+  scanf("%d", &spis.rok);
+  puts("Spis skryptow : ");
+  printf("autor : %s,  tytul : %s, rok wydania : %8d",
+           spis.autor, spis.tytul, spis.rok);
+  getche();
+  return 0;
+}
